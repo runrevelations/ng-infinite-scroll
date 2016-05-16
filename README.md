@@ -1,4 +1,4 @@
-This an AngularJs infinite scroll for ng-repeat.
+This is an AngularJs infinite scroll for ng-repeat.
 
 Clone this repo and open index.html to view.
 
