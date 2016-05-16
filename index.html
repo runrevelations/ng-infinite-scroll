@@ -1,0 +1,30 @@
+<html ng-app="ngInfiniteScroll">
+
+<head>
+<title>ngInfiniteScroll</title>
+<meta name="viewport" content="width=device-width">
+<link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css rel="stylesheet" />
+<link href="style.css" rel="stylesheet" />
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-mocks.js"></script>
+<script src="main.js"></script>
+<script src="scroll.controller.js"></script>
+</head>
+
+<!-- On initialization get all users -->
+<body ng-controller="ScrollController as vm" ng-init="vm.getUsers()">
+	
+<!-- Users with filter for vm.filterNumber -->
+<div class="container" ng-repeat="user in vm.allUsers[0] | limitTo: vm.filterNumber">
+  <div id="user-info">
+    {{ user.firstName }}
+    <br>
+    {{ user.lastName }}
+    <br>
+    {{ user.email }}
+  </div>
+</div>
+
+</body>
+
+</html>
